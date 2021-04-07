@@ -1,0 +1,8 @@
+{
+  "index": {
+    "refresh_interval": "1s",
+    "max_ngram_diff": 19,
+    "number_of_shards": 1,
+    "number_of_replicas": 1
+  }
+}

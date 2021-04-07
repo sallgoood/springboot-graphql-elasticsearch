@@ -1,0 +1,38 @@
+{
+  "properties": {
+    "_all": {
+      "enabled": false
+    },
+    "name": {
+      "type": "text"
+    },
+    "geo": {
+      "type": "geo_point"
+    },
+    "roomCount": {
+      "type": "integer"
+    },
+    "bathRoomCount": {
+      "type": "integer"
+    },
+    "constructedDate": {
+      "type": "date",
+      "format": "yyyy-MM-dd"
+    },
+    "address": {
+      "type": "text"
+    },
+    "listedDateTime": {
+      "type": "date",
+      "format": "yyyy-MM-dd HH:mm:ss"
+    },
+    "updatedDateTime": {
+      "type": "date",
+      "format": "yyyy-MM-dd HH:mm:ss"
+    },
+    "unlistedDateTime": {
+      "type": "date",
+      "format": "yyyy-MM-dd HH:mm:ss"
+    }
+  }
+}

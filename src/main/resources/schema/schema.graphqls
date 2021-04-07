@@ -1,0 +1,51 @@
+type Query {
+    listings(filter: ListingFilter): [Listing]
+}
+
+type Listing {
+    id: String!,
+    name: String,
+    latitude: Float,
+    longitude: Float,
+    roomCount: Int,
+    bathRoomCount: Int,
+    constructedDate: Date,
+    address: String,
+    listedDateTime: DateTime,
+    updatedDateTime: DateTime,
+    unlistedDateTime: DateTime,
+}
+
+input ListingFilter {
+    terms: [Term],
+    matches: [Match],
+    ranges: [Range],
+    geoDistance: GeoDistance,
+}
+
+input GeoDistance {
+    latitude: Float!,
+    longitude: Float!,
+    distance: Float!,
+    distanceUnit: String!,
+}
+
+input Range {
+    gte: String!,
+    lte: String!,
+    field: String!,
+}
+
+input Match {
+    field: String!,
+    value: String!,
+}
+
+input Term {
+    field: String!,
+    value: String!,
+}
+
+scalar Date
+scalar DateTime
+scalar BigDecimal
